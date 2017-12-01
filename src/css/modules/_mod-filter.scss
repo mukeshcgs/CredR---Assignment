@@ -1,0 +1,18 @@
+//mod-filter
+.mod-filter {
+    .filter-title {
+        font-size: 18px;
+        line-height: 20px;
+        text-transform: capitalize;
+        color: $clr-base-sec;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mod-filter {
+        .filter-title {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}

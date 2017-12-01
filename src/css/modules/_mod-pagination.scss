@@ -1,0 +1,44 @@
+//mod-pagination
+.mod-pagination {
+    background: $clr-primary;
+    border-radius: 25px;
+    display: none;
+    padding: 10px 15px;
+    .cm-icon,
+    .page-text {
+        color: $clr-root;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+    .page-text {
+        padding: 0px 20px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 36px;
+            background: #bf282e;
+            left: 0;
+            top: -10px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 36px;
+            background: #bf282e;
+            right: 0;
+            top: -10px;
+        }
+    }
+    .cm-icon {
+        &.icon-arrow-left {
+            padding-right: 10px;
+        }
+        &.icon-arrow-right {
+            padding-left: 10px;
+        }
+    }
+}

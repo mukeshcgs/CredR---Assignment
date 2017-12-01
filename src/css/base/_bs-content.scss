@@ -1,0 +1,52 @@
+.bs-content{
+    .nav-tab{
+        width: 100%;
+        background: #333333;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+        margin-top: 56px;
+        display: none;
+        .tab-list{
+            margin: 0;
+            padding: 0;
+            display: block;
+            overflow: hidden;
+            .menu{
+                width: 33.33%;
+                padding: 14px 0;
+                float: left;
+                text-align: center;
+                font-weight: $font-bold;
+                color: rgba(255,255,255,0.5);
+                font-size: 12px;
+                line-height: 18px;
+                position: relative;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 36px;
+                    height: 2px;
+                    background: transparent;
+                    margin: 0 auto;
+
+                }
+                &:hover,&.active{
+                    color: $clr-root;
+                    &:after{
+                        background: $clr-root;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .bs-content{
+        position: relative;
+        .nav-tab{
+            display: block;
+        }
+    }
+}

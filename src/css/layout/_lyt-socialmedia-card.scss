@@ -1,0 +1,10 @@
+//lyt-socialmedia-card
+.lyt-socialmedia-card {
+    overflow: hidden;
+    margin-bottom: 25px;
+    .item {
+        width: 33.33%;
+        float: left;
+        padding: 0 10px;
+    }
+}

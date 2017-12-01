@@ -1,0 +1,32 @@
+#close-journey{
+    .modal-header{
+        text-align: center;
+        .modal-title{
+            font-weight: $font-bold;
+            font-size: 18px;
+            color: $clr-default;
+        }
+    }
+    .modal-body{
+        text-align: center;
+        .que{
+            font-size: 24px;
+            font-weight: $font-light;
+            margin-bottom: 15px;
+        }
+        .final-wrap{
+            margin-top: 25px;
+            .final-msg{
+                width: 50%;
+                background: url('../img/icon/mail.png') no-repeat bottom 5px left;
+                .form-group{
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .form-group{
+            width: 100%;
+        }
+    }
+}

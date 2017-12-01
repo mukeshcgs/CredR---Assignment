@@ -1,0 +1,60 @@
+.mod-desk-info{
+    width: 50%;
+    float: left;
+    text-align: left;
+    .info{
+        
+        .title{
+            font-size: 48px;
+            line-height: 60px;
+            color: $clr-root;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .sub-title{
+            font-size: 18px;
+            text-transform: uppercase;
+            line-height: 25px;
+            color: $clr-root;
+            font-weight: $font-bold;
+            text-align: left;
+            margin-bottom: 20px;
+            .tag{
+                font-size: 12px;
+                font-weight: $font-medium;
+                color: $clr-base-sec;
+                padding-left: 3px;
+                margin-left: 7px;
+                border-left: 1px solid $clr-base-sec;
+            }
+        }
+        .desc{
+            width: 100%;
+            height: 60%;
+            p{
+                color: $clr-base-sec;
+                font-weight: $font-bold;
+            }
+        }
+        
+    }
+    .img-wrap{
+        
+        width: 100%;
+        float: left;
+        img{
+            width: 100%;
+            float: left;
+        }
+    }
+    .btn{
+        background: transparent;
+        margin-top: 10px;
+        &:hover{
+            background: transparent;
+        }
+    }
+    
+}

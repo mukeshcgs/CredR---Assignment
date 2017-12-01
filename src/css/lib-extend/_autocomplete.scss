@@ -1,0 +1,24 @@
+.ui-autocomplete {
+    background: $clr-root;
+    box-shadow: 1px 1px 30px -10px;
+}
+.ui-menu .ui-menu-item a{
+    background:$clr-root;
+    height:47px;
+    padding: 12px 15px;
+    color: $clr-base-sec;
+    font-weight: $font-normal;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size:14px;
+    font-family: 'Roboto', sans-serif;
+    &.ui-state-focus{
+        margin: 0;
+    }
+    &:hover{
+        height: auto;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        
+
+    }
+}

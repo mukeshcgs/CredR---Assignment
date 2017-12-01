@@ -1,0 +1,140 @@
+//bs-socialmedia-card
+.bs-socialmedia-card {
+    overflow: hidden;
+    background: $clr-root;
+    padding: 20px 13px;
+    min-height: 160px;
+    position: relative;
+    .media-profile-img-wrap {
+        float: left;
+        width: 56px;
+        height: 56px;
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .media-profile-cont-wrap {
+        text-align: left;
+        overflow: hidden;
+        padding-left: 10px;
+    }
+    .media-profile-name {
+        font: {
+            size: 14px;
+            weight: $font-normal;
+        }
+        line-height: 16px;
+        margin-bottom: 5px;
+    }
+    .media-profile-username,
+    .media-profile-desc {
+        font: {
+            size: 12px;
+            weight: $font-normal;
+        }
+        line-height: 14px;
+        margin-bottom: 5px;
+    }
+    .media-profile-timestamp {
+        font: {
+            size: 12px;
+            weight: $font-normal;
+        }
+        line-height: 14px;
+        margin-bottom: 10px;
+        color:$clr-base-sec;
+        display: inline-block;
+    }
+    .media-profile-desc {
+        margin-bottom: 0;
+        line-height: 18px;
+    }
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 66px 66px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:before {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 20px;
+        color: $clr-root;
+        font-family: 'RHF';
+        text-transform: lowercase;
+        z-index: 2;
+    }
+    &.typ-twitter {
+        .media-profile-desc {
+            span {
+                color: #ed1c24;
+            }
+        }
+        &:after {
+            border-color: transparent transparent $clr-twitter transparent;
+        }
+        &:before {
+            content: 'n';
+        }
+        .media-profile-timestamp {
+            position: absolute;
+            right: 20px;
+            top: 25px;
+            margin-bottom: 0;
+        }
+    }
+    &.typ-fb {
+        .media-profile-desc {
+            span {
+                color: $clr-fb;
+            }
+        }
+        &:after {
+            border-color: transparent transparent $clr-fb transparent;
+        }
+        &:before {
+            content: 'm';
+        }
+    }
+    &.typ-linkedin {
+        .media-profile-desc {
+            span {
+                color: $clr-linkedin;
+            }
+        }
+        &:after {
+            border-color: transparent transparent $clr-linkedin transparent;
+        }
+        &:before {
+            content: 'v';
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .bs-socialmedia-card {
+        min-height: 160px;
+        .media-profile-img-wrap {
+            width: 45px;
+            height: 45px;
+            img {
+                width: 100%;
+            }
+        }
+        .media-profile-name {
+            font-size: 11px;
+            line-height: 13px;
+        }
+        .media-profile-username,
+        .bs-socialmedia-card,
+        .media-profile-desc {
+            font-size: 9px;
+            line-height: 14px;
+        }
+    }
+}

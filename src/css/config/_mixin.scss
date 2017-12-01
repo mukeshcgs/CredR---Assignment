@@ -1,0 +1,62 @@
+//box-shadow
+@mixin box-shadow($left, $top, $radius, $color) {
+    box-shadow: $left $top $radius $color;
+    -webkit-box-shadow: $left $top $radius $color;
+    -moz-box-shadow: $left $top $radius $color;
+}
+
+//transition
+@mixin transition($arg) {
+    transition: $arg;
+    -webkit-transition: $arg;
+    -moz-transition: $arg;
+} 
+
+//animation
+@mixin animation($anim-name, $duration, $iteration, $direction) {
+    animation: $anim-name $duration $iteration $direction;
+    -webkit-animation: $anim-name $duration $iteration $direction;
+    -moz-animation: $anim-name $duration $iteration $direction;
+}
+ 
+// animation keyframe
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+//border-radius
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+//input-placeholder 
+@mixin input-placeholder($content) {
+    &.placeholder {
+        color: $content;
+    }
+    &:-moz-placeholder {
+        color: $content;
+    }
+    &::-moz-placeholder {
+        color: $content;
+    }
+    &:-ms-input-placeholder {
+        color: $content;
+    }
+    &::-webkit-input-placeholder {
+        color: $content;
+    }
+}

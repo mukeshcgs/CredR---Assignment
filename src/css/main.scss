@@ -1,0 +1,158 @@
+/* config */
+
+@import "config/variables";
+@import "config/mixin";
+
+/* element */
+
+@import "element/reset";
+@import "element/elements";
+@import "common/common";
+
+// /* bootstrap-extend */
+
+@import "bootstrap-extend/btn";
+@import "bootstrap-extend/tab";
+@import "bootstrap-extend/form";
+@import "bootstrap-extend/modal";
+@import "bootstrap-extend/range";
+
+// /* lib-extend */
+
+@import "lib-extend/swiper";
+@import "lib-extend/map";
+@import "lib-extend/select2";
+@import "lib-extend/autocomplete";
+
+
+// /* base */
+
+@import "base/bs-header";
+@import "base/bs-footer";
+@import "base/bs-sec";
+@import "base/bs-banner";
+@import "base/bs-slider";
+@import "base/bs-scroll-anim";
+@import "base/bs-card";
+@import "base/bs-icon-text";
+@import "base/bs-com-info";
+@import "base/bs-team";
+@import "base/bs-content";
+@import "base/bs-socialmedia-card";
+@import "base/bs-blog";
+@import "base/bs-autocomplete-search";
+@import "base/bs-select";
+@import "base/bs-resource";
+@import "base/bs-blog-detail";
+@import "base/bs-journey";
+@import "base/bs-policy";
+
+// /* modules */ 
+
+@import "modules/mod-social-media";
+@import "modules/mod-review";
+@import "modules/mod-desk-info";
+@import "modules/mod-award";
+@import "modules/mod-queries";
+@import "modules/mod-filter";
+@import "modules/mod-pagination";
+
+// /* layout */
+
+@import "layout/lyt-list";
+@import "layout/lyt-review";
+@import "layout/lyt-desk-info";
+@import "layout/lyt-award";
+@import "layout/lyt-socialmedia-card";
+@import "layout/lyt-queries";
+@import "layout/lyt-blog";
+@import "layout/lyt-presskit";
+
+.bs-card .card-cont .has-error{
+    .error-msg{
+        display: block;
+        color:red;
+    }
+}
+/* Animation */
+@-webkit-keyframes loading {
+    to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes loading {
+    to { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes loading {
+    to { -ms-transform: rotate(360deg); }
+}
+@keyframes loading {
+    to { transform: rotate(360deg); }
+}
+
+.form-group.async-validating:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: transparent;
+    
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #777;
+    border-left: 2px solid #777;
+    
+    -webkit-animation: loading 1.2s infinite linear;
+    -moz-animation: loading 1.2s infinite linear;
+    -ms-animation: loading 1.2s infinite linear;
+    animation: loading 1.2s infinite linear;
+    top: 8px;
+    right: 4px;
+}
+
+
+ //EXAMPLE 1
+//  .example-enter {
+//     opacity: 0.01;
+//   }
+  
+//   .example-enter.example-enter-active {
+//     opacity: 1;
+//     transition: opacity 5000ms ease-in;
+//   }
+  
+//   .example-leave {
+//     opacity: 1;
+//   }
+  
+//   .example-leave.example-leave-active {
+//     opacity: 0.01;
+//     transition: opacity 3000ms ease-in;
+//   }  
+  //ExAMPLE 2
+  
+.example2-enter { 
+    opacity: 0.01;
+  }
+  
+  .example2-enter.example2-enter-active {
+    opacity: 1;
+    transition: opacity 9000ms ease-in;
+  }
+  
+  .example2-leave {
+    opacity: 1;
+  }
+  
+  .example2-leave.example2-leave-active {
+    opacity: 0.01;
+    transition: opacity 8000ms ease-in;
+  }
+  .example2-appear {
+    opacity: 0.01;
+  }
+  
+  .example2-appear.example2-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }

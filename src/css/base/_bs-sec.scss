@@ -1,0 +1,264 @@
+/* bs-sec */
+
+.bs-sec {
+    padding: 75px 0;
+    background: #f6f6f6;
+    .sec-head {
+        margin-bottom: 50px;
+        text-align: center;
+        p {
+            font-size: 15px;
+        }
+    }
+    .sec-title {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: $clr-default;
+        font-weight: $font-bold;
+        .sm-text {
+            font-size: 16px;
+            color: #a3a3a3;
+            display: block;
+            margin-bottom: 12px;
+            font-weight: $font-normal;
+        }
+    }
+    .sub-title {
+        text-align: center;
+        font-size: 16px;
+        color: #a3a3a3;
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    .sec-cont {
+        overflow: hidden;
+    }
+    &.typ-invert {
+        .sec-title,
+        .sub-title {
+            color: $clr-root;
+        }
+    }
+    &.typ-alt {
+        background: $clr-root;
+    }
+    &.typ-nopadding {
+        padding: 0;
+    }
+    &.typ-bottom-space {
+        padding-bottom: 0;
+    }
+    &.typ-eligibilty {
+        text-align: center;
+        .container {
+            padding: 0;
+        }
+        .main-calculator-wrap {
+            margin-bottom: 65px;
+            .cm-icon-bg {
+                width: 110px;
+                height: 110px;
+                display: block;
+                margin: 0px auto;
+                background-size: 140px;
+                background: url("../img/icon/main-calculator-wrap.svg") no-repeat -1px 0 transparent;
+            }
+            /* Safari Fix */
+            .cm-icon-bg:not(:root:root) {
+                background-position: 10px -1044px;
+            }
+            .btn {
+                margin-top: 20px;
+            }
+        }
+        .lyt-list {
+            .cm-icon-bg {
+                background-size: 65px;
+                &.icon-calc-emi {
+                    background: url("../img/icon/icon-calc-emi.svg") no-repeat 0 0 transparent;
+                }
+                &.icon-calc-property {
+                    background: url("../img/icon/icon-calc-property.svg") no-repeat 0 0 transparent;
+                }
+                &.icon-calc-stamp {
+                    background: url("../img/icon/icon-calc-stamp.svg") no-repeat 0 0 transparent;
+                }
+                &.icon-calc-interest {
+                    background: url("../img/icon/icon-calc-interest.svg") no-repeat 0 0 transparent;
+                }
+                &.icon-calc-tax {
+                    background: url("../img/icon/icon-calc-tax.svg") no-repeat 0 0 transparent;
+                }
+                &.icon-calc-afforability {
+                    background: url("../img/icon/icon-calc-afforability.svg") no-repeat 0 0 transparent;
+                }
+            }
+        }
+    }
+    &.typ-undstd-first {
+        .container {
+            padding: 0;
+        }
+        .lyt-list {
+            margin-left: -3px;
+            margin-right: -3px;
+            .item {
+                padding: 0 3px;
+            }
+        }
+    }
+    &.typ-queries {
+        background: url('../img/media/queries-banner.jpg') no-repeat 0 0 transparent;
+        background-size: cover;
+        padding: 50px 0;
+        .sec-head {
+            margin-bottom: 95px;
+        }
+    }
+    &.typ-media-tabs {
+        padding: 75px 0px 30px;
+        .sec-head {
+            text-align: center;
+            .tabs {
+                display: inline-block;
+            }
+        }
+        .tabs {
+            .tab-content {
+                padding-top: 0;
+            }
+        }
+        .cm-act-wrap {
+            margin-top: 20px;
+        }
+    }
+    &.typ-blog-details {
+        padding: 100px 0 75px;
+        .sec-head {
+            overflow: hidden;
+            text-align: left;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid $clr-base-sec;
+            .sec-title {
+                float: left;
+            }
+            .btn-link {
+                float: right;
+                padding-top: 5px;
+            }
+        }
+        .sec-cont {
+            padding: 0 100px;
+        }
+    }
+}
+
+
+/* bs-sec */
+
+@media screen and (max-width:768px) {
+    .bs-sec {
+        padding: 36px 15px;
+        .sec-head {
+            margin-bottom: 35px;
+        }
+        .sec-title {
+            font-size: 18px;
+            .sm-text {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+        }
+        .sub-title {
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+        .sec-cont {
+            overflow: hidden;
+        }
+        &.typ-alt {
+            background: $clr-root;
+        }
+        &.typ-eligibilty {
+            text-align: center;
+            .lyt-list {
+                .item {
+                    margin-bottom: 35px;
+                }
+            }
+            .main-calculator-wrap {
+                margin-bottom: 45px;
+                .cm-icon-bg {
+                    width: 110px;
+                    height: 110px;
+                    display: block;
+                    margin: 0px auto;
+                }
+                .btn {
+                    margin-top: 25px;
+                }
+            }
+        }
+        &.typ-undstd-first {
+            .lyt-list {
+                margin-left: -3px;
+                margin-right: -3px;
+                .item {
+                    padding: 0 3px;
+                    float: left;
+                    width: 50%;
+                    min-height: 130px;
+                    .bs-icon-text {
+                        &.typ-bg {
+                            padding: 25px 5px;
+                        }
+                    }
+                    &:nth-child(odd) {
+                        border-right: 1px solid #eae9e9;
+                    }
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        border-bottom: 1px solid #eae9e9;
+                    }
+                }
+            }
+        }
+        &.typ-media-tabs {
+            padding: 10px 15px;
+            .container {
+                padding: 0px;
+            }
+            .sec-head {
+                // text-align: left;
+                margin-bottom: 10px;
+                .tabs {
+                    .nav {
+                        li {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        &.typ-queries {
+            padding: 25px 0px;
+            .sec-head {
+                margin-bottom: 25px;
+            }
+        }
+        &.typ-blog-details {
+            padding: 80px 0 30px;
+            .sec-head {
+                margin-bottom: 15px;
+                padding: 0 0 10px;
+                .btn-link {
+                    padding-top: 0;
+                }
+            }
+            .sec-cont {
+                padding: 0;
+            }
+        }
+    }
+}

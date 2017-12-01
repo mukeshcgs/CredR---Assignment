@@ -14,4 +14,4 @@ Resources:
 Use https://api.credr.com/v1/product/search/?q=eyJwYWdlIjoxLCJjdXJyZW50X2NpdHlfaWQiOjJ9 as the api url for Point No 1 above.
 Use can use any helper libraries for both CSS and JS (except JQuery, it should not be used).
 Hint
-For Point 2 Above use the current_location_name key in the results above, and get the             Lat, Long using google map api
+For Point 2 Above use the current_location_name key in the results above, and get the Lat, Long using google map api

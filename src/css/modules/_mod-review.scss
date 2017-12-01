@@ -1,0 +1,74 @@
+/* mod-review */
+
+.mod-review {
+    padding-bottom: 50px;
+    padding-top: 66px;
+    position: relative;
+    text-align: center;
+    &::before {
+        content: "";
+        background: url('../img/icon/inverted.png') no-repeat;
+        width: 34px;
+        height: 31px;
+        font-size: 30px;
+        color: #c5c5c5;
+        position: absolute;
+        top: 0;
+        font-family: "rhf" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+    }
+    .title {
+        font-size: 18px;
+        color: $clr-primary;
+        text-transform: capitalize;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            height: 1px;
+            width: 12px;
+            background: $clr-primary;
+            left: -18px;
+        }
+        &:after {
+            left: auto;
+            right: -18px;
+        }
+    }
+    p {
+        font-size: 24px;
+        line-height: 30px;
+        color: #4d4a4b;
+        font-weight: $font-light;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mod-review {
+        padding-bottom: 36px;
+        padding-top: 36px;
+        position: relative;
+        text-align: center;
+        &::before {
+            font-size: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .title {
+            font-size: 16px;
+            bottom: 0;
+        }
+        p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}

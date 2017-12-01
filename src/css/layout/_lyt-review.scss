@@ -1,0 +1,22 @@
+/* lyt-review */
+
+.lyt-review {
+    .mod-review {
+        width: 680px;
+        margin: 0px auto;
+        // height: 156px;
+        // overflow: hidden;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .lyt-review {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+        .mod-review {
+            width: 90%;
+        }
+    }
+}

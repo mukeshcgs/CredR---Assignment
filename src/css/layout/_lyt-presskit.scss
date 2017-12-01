@@ -1,0 +1,19 @@
+//lyt-presskit
+.lyt-presskit {
+    .bs-sec {
+        padding-top: 0;
+        padding-bottom: 0px;
+        .sec-head {
+            text-align: left;
+            margin-bottom: 30px;
+            .sec-title {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .resource-list {
+        >li {
+            margin-bottom: 30px;
+        }
+    }
+}

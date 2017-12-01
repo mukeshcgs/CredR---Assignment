@@ -1,0 +1,158 @@
+.lyt-award{
+    position: relative;
+    padding-bottom: 240px;
+    .mod-award{
+        .img-wrap{
+            display: table;
+            vertical-align: middle;
+            position: relative;
+            img{
+                display: table-cell;
+                vertical-align: middle;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    .month-nav-wrap{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .month-list{
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            .month{
+                width: 57px;
+                display: inline-block;
+                margin: 0 25px;
+                padding-top: 60px;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: $font-medium;
+                color: #aeaeaf;
+                cursor: pointer;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 27px;
+                    height: 27px;
+                    border-radius: 50%;
+                    background: rgba(0,0,0,0.05);
+
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 10px;
+                    height: 10px;
+                    display: table;
+                    background: $clr-root;
+                    border: 3px solid #a6a7a9;
+                    border-radius: 50%;
+
+                }
+                &.active{
+                    font-size: 16px;
+                    color: $clr-primary;
+                    &:before{
+                        width: 55px;
+                        height: 55px;
+                        background: $clr-primary;
+                        opacity: 0.05;
+                        top: -12px;
+                    }
+                    &:after{
+                        width: 25px;
+                        height: 25px;
+                        top: 3px;
+                        border: 7px solid $clr-primary;
+                    }
+                }
+            }
+            &:before{
+                position: absolute;
+                content: "";
+                left: 0;
+                top:15px;
+                right: 0;
+                border-bottom: 1px solid #dddede;
+            }
+        }
+    }
+    .year-wrap{
+        position: absolute;
+        left: 42%;
+        right: 42%;
+        bottom: 130px;
+        text-align: center;
+        .swiper-container{
+            padding: 0;
+            .swiper-slide{
+                span{
+                    font-size: 36px;
+                    color: $clr-primary;
+                    line-height: 78px;
+                    border-bottom: 1px solid $clr-primary;
+                }
+                
+            }
+            .swiper-button-next, .swiper-button-prev{
+                height: 27px;
+                margin-top: -9px;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width:768px) {
+    .lyt-award{
+        padding-bottom: 190px;
+        .year-wrap{
+            left: 20%;
+            right: 20%;
+        }
+        .month-nav-wrap{
+            overflow-x: scroll;
+            padding-top: 20px;
+            .month-list{
+                display: table;
+                .month{
+                    display: table-cell;
+                    padding: 60px 20px 0;
+                }
+            }
+        }
+        .bs-slider{
+            .swiper-container{
+                padding: 0;
+                
+            }
+            .swiper-button-next, .swiper-button-prev{
+                top: 30%;
+            }
+            .swiper-button-next{
+                right: 0;
+            }
+            .swiper-button-prev{
+                left: 0;
+            }
+        }
+    }
+}

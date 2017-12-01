@@ -1,0 +1,67 @@
+//bs-resource
+.bs-resource {
+    background: $clr-root;
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(235, 235, 235, 1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(235, 235, 235, 1);
+    box-shadow: 0px 0px 13px 0px rgba(235, 235, 235, 1);
+    overflow: hidden;
+    position: relative;
+    &.typ-img {
+        .resource-wrap {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            img {
+                display: none;
+            }
+        }
+    }
+    &.typ-video {
+        .resource-wrap {
+            video {
+                width: 100%;
+            }
+        }
+    }
+    .resource-hover-wrap {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        @include transition(all 0.2s ease-out 0.1s);
+        .resource-title {
+            font-size: 24px;
+            line-height: 26px;
+            color: $clr-root;
+            text-transform: capitalize;
+        }
+        .btn-download {
+            position: absolute;
+            padding: 15px 25px;
+            border-radius: 5px;
+            background-color: $clr-base-sec;
+            right: 20px;
+            bottom: 20px;
+            &:before {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &:hover {
+        .resource-hover-wrap {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

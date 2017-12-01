@@ -1,0 +1,123 @@
+/* bootstrap tab */
+
+.tabs {
+    .nav-tabs {
+        border: none;
+        position: relative;
+        li {
+            display: inline-block;
+            float: none;
+            position: static;
+            a {
+                font-size: 14px;
+                text-transform: capitalize;
+                border: none;
+                color: #999999;
+                position: relative;
+                padding: 6px 11px;
+                border-radius: 0px;
+                &:hover,
+                &:active {
+                    background: transparent;
+                }
+            }
+            &.active,
+            &:hover {
+                a,
+                a:focus,
+                a:hover {
+                    background: transparent;
+                    border: none;
+                    color: #58595b;
+                    font-weight: 500;
+                }
+            }
+        }
+        .magic-line{
+            position: absolute; 
+            bottom: -2px; 
+            left: 11px; 
+            width: 20px; 
+            height: 2px; 
+            background: $clr-base;
+        }
+    }
+    .tab-content {
+        padding-top: 20px;
+
+    }
+    &.typ-btn {
+        .nav-tabs {
+            margin-bottom: 40px;
+            border: none;
+            li {
+                margin-right: 10px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    font-size: 18px;
+                    border: 1px solid $clr-base-sec;
+                    color: $clr-base;
+                    border-radius: 25px;
+                    background: $clr-root;
+                    font-weight: $font-light;
+                    @include transition(all 0.3s ease);
+                    &:hover,
+                    &:active {
+                        font-weight: $font-normal;
+                        color: $clr-root;
+                        background: $clr-base;
+                        border: 1px solid $clr-base-sec;
+                    }
+                }
+                &.active,
+                &:hover {
+                    a,
+                    a:focus,
+                    a:hover {
+                        font-weight: $font-normal;
+                        color: $clr-root;
+                        background: $clr-base;
+                        border: 1px solid $clr-base-sec;
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .tabs {
+        .nav-tabs {
+            border: none;
+            li {
+                width: 32.33%;
+                a {
+                    font-size: 12px;
+                    padding: 6px 11px;
+                }
+                &.active,
+                &:hover {
+                    a,
+                    a:focus,
+                    a:hover {
+                        background: transparent;
+                        border: none;
+                        color: #58595b;
+                        &:before {
+                            left: 6px;
+                            bottom: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content {
+            padding-top: 24px;
+        }
+    }
+}

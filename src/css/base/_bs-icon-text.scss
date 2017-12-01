@@ -1,0 +1,148 @@
+/* bs-icon-text */
+
+.bs-icon-text {
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    @include transition(all 0.3s ease);
+    transform: scale(1);
+    &:before {
+        content: '';
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid #e7e7e7;
+        display: block;
+        @include transition(all 0.3s ease);
+        transform: scale(0.96);
+    }
+    &:hover {
+        transform: scale(1.15);
+        &:before {
+            @include box-shadow(0px, 0px, 2px, #d2d1d1);
+            transform: scale(1);
+        }
+    }
+    .cm-icon-bg {
+        width: 46px;
+        height: 46px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        transform: translateX(-50%);
+    }
+    .text {
+        font-size: 16px;
+        text-transform: capitalize;
+        display: block;
+        margin-top: 15px;
+        font-weight: $font-light;
+    }
+    &.typ-bg {
+        padding: 5px;
+        &:before {
+            width: 256px;
+            height: 256px;
+            background: $clr-root;
+            border: none;
+            @include box-shadow(0px, 0px, 8px, #f5f0f0);
+            @include transition(all 0.3s ease);
+            transform: scale(0.96);
+        }
+        &:hover {
+            &:before {
+                @include box-shadow(0px, 0px, 12px, #d2d1d1);
+                transform: scale(1);
+            }
+        }
+        /* Safari Fix */
+        .cm-icon-bg:not(:root:root) {
+            background-size: 140px;
+        }
+        .cm-icon-bg {
+            width: 100px;
+            height: 75px;
+            top: 70px;
+            background-size: 150px;
+            &.need-loan {
+                background: url("../img/icon/need-loan.svg") no-repeat 0 0 transparent;
+            }
+            &.identify-property {
+                background: url("../img/icon/identify-property.svg") no-repeat 0 0 transparent;
+            }
+            &.loan-agianst-property {
+                background: url("../img/icon/loan-agianst-property.svg") no-repeat 0 0 transparent;
+            }
+            &.corporate-loan {
+                background: url("../img/icon/corporate-loan.svg") no-repeat 0 0 transparent;
+            }
+        }
+        .text {
+            margin-top: 26px;
+            font-size: 14px;
+            line-height: 18px;
+            position: absolute;
+            top: 140px;
+            left: 0;
+            right: 0;
+            padding: 0 38px;
+            text-transform: none;
+        }
+    }
+}
+
+
+/* bs-icon-text */
+
+@media screen and (max-width:768px) {
+    .bs-icon-text {
+        .text {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        &.typ-bg {
+            padding: 5px;
+            &:before {
+                content: none;
+            }
+            .cm-icon-bg {
+                width: 80px;
+                height: 65px;
+                top: auto;
+                position: relative;
+                left: auto;
+                transform: translate(0);
+                background-size: 100px;
+                &.need-loan {
+                    // background-position: 10px -128px;
+                }
+                &.identify-property {
+                    // background-position: 10px -213px;
+                }
+                &.loan-agianst-property {
+                    // background-position: 10px -295px;
+                }
+                &.corporate-loan {
+                    // background-position: 10px -377px;
+                }
+            }
+            /* Safari Fix */
+            .cm-icon-bg:not(:root:root) {
+                background-size: 95px;
+            }
+            .text {
+                font-size: 13px;
+                line-height: 16px;
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                padding: 0 15px;
+                margin-top: 10px;
+            }
+        }
+    }
+}

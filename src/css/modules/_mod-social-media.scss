@@ -1,0 +1,46 @@
+/* mod-social-media */
+
+.mod-social-media {
+    .item {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block;
+        margin: 0 6px;
+        border: 1px solid #666769;
+        position: relative;
+        .cm-icon {
+            color: $clr-root;
+            font-size: 19px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-47%) translateX(-50%);
+            @include transition(all 0.3s ease);
+        }
+        &:hover {
+            border: 1px solid #fff;
+            background: $clr-root;
+            @include transition(all 0.3s ease);
+            .cm-icon {
+                &.icon-facebook-o {
+                    color: $clr-fb;
+                }
+                &.icon-twitter {
+                    color: $clr-twitter;
+                }
+                &.icon-linkedin,
+                &.icon-linkedin1 {
+                    color: $clr-linkedin;
+                }
+                &.icon-youtube {
+                    color: $clr-youtube;
+                }
+            }
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

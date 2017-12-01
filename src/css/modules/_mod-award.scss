@@ -1,0 +1,52 @@
+.mod-award{
+    display: block;
+    text-align: center;
+    .title{
+        font-size: 150px;
+        line-height: 133px;
+        color: rgba(0,0,0,0.1);
+        font-weight: $font-bold;
+    }
+    .img-wrap{
+        width: 200px;
+        height: 200px;
+        margin: -60px auto 15px;
+        border-radius: 50%;
+        background: $clr-root;
+        text-align: center;
+        box-shadow: 0px 0px 50px -18px;
+    }
+    .desc{
+        width: 638px;
+        margin: 0 auto;
+        p{
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: $font-normal;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mod-award{
+        padding-top: 10px;
+        .title{
+            display: none;  
+        }
+        .img-wrap{
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px;
+            img{
+                width: 50%;
+            }
+        }
+        .desc{
+            width: 100%;
+            p{
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+}

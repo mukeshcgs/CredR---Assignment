@@ -1,0 +1,46 @@
+.lyt-desk-info{
+    display: block;
+    .mod-desk-info{
+        position: relative;
+        .info{
+            position: absolute;
+            bottom: 90px;
+            left: 20px;
+            right: 20px;
+        }
+        .btn{
+            position: absolute;
+            left: 20px;
+            bottom: 50px;
+        }
+        .overlay-wrap{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1;
+            padding: 70px 20px 20px 20px;
+            -webkit-transition: all 0.5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
+            transform: translateY(100%);
+            .info{
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                width: 100%;
+                height: 80%;
+            }
+        }
+        
+        &.active{
+            .overlay-wrap{
+                transform: translateY(0%);
+            }
+        }
+    }
+}

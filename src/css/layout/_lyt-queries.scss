@@ -1,0 +1,44 @@
+//lyt-queries
+.lyt-queries {
+    margin-bottom: 70px;
+    .queries-wrap {
+        overflow: hidden;
+        width: 550px;
+        margin: 0 auto;
+        .item {
+            float: left;
+            margin-right: 100px;
+            position: relative;
+            &:after {
+                content: '';
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                right: -50px;
+                top: 0;
+                background: $clr-root;
+            }
+            &:last-child {
+                margin-right: 0;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .lyt-queries {
+        margin-bottom: 0px;
+        .queries-wrap {
+            width: 100%;
+            .item {
+                margin-right: 30px;
+                &:after {
+                    right: -16px;
+                }
+            }
+        }
+    }
+}

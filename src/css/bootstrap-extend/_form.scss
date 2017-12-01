@@ -1,0 +1,135 @@
+.form-control {
+    padding: 12px 6px;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: $font-normal;
+    color: #58595b;
+    position: relative;
+    @include input-placeholder(#eeeeee);
+    box-shadow: none;
+    border-radius: 0px;
+    &:focus {
+        border-color: #eeeeee;
+        box-shadow: none;
+    }
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+    .form-label {
+        font-size: 12px;
+        color: #c3c3c3;
+        position: absolute;
+        left: 6px;
+        top: 10px;
+        @include transition(all 0.3s ease);
+        pointer-events: none;
+    }
+    .form-control:focus~.form-label,
+    .form-control:valid~.form-label,
+    {
+        top: -10px;
+        font-size: 11px;
+    }
+    .form-control:focus~.underline-input{
+        right: 0;
+    }
+    
+}
+
+.form-wrap {
+    .cm-act-wrap {
+        .btn {
+            margin-top: 10px;
+        }
+    }
+}
+.radio-wrap{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 15px;
+    .input-group{
+        display: inline-block;
+        margin-right: 18px;
+        position: relative;
+        input[type=radio]:not(old){
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+
+        }
+        input[type=radio]:not(old)+label {
+            display: inline-block;
+            padding-left: 20px;
+            font-size: 12px;
+            color: $clr-base-sec;
+            line-height: 18px;
+            cursor: pointer;
+            position: relative;
+        }
+        input[type=radio]:not(old)+label span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $clr-base-sec;
+                left: 0;
+                top: 0;
+                border-radius: 50%;
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 16px;
+                height: 16px;
+                transform: scale(0);
+                transition: -webkit-transform .28s ease;
+                transition: transform .28s ease;
+                transition: transform .28s ease,-webkit-transform .28s ease;
+                border-radius: 50%;
+                background: $clr-default;
+            }
+        }
+        input[type=radio]:not(old):checked+label span{
+            &:after{
+                transform: scale(0.5);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .form-control {
+        font-size: 13px;
+        line-height: 15px;
+        &:focus {}
+    }
+    .form-group {
+        margin-bottom: 20px;
+        position: relative;
+        .form-label {}
+        .form-control:focus+.form-label,
+        .form-control:valid+.form-label,
+        {}
+    }
+    .form-wrap {
+        .cm-act-wrap {
+            .btn {
+                margin-top: 10px;
+            }
+        }
+    }
+}
