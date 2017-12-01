@@ -1,4 +1,4 @@
-# CredR---Assignment
+# CredR Assignment
 
 React-Redux JS Coding Assignments
 
