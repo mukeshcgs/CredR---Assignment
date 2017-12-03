@@ -11,10 +11,10 @@ export const RESET_ACTIVE_VEHICLES = 'RESET_ACTIVE_VEHICLES';
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 const ROOT_URL = "https://api.credr.com/v1/product/search/?q=eyJwYWdlIjoxLCJjdXJyZW50X2NpdHlfaWQiOjJ9";
-console.log(ROOT_URL);
+//console.log(ROOT_URL);
 
 export function fetchVehicles() {
-  console.log("FETCH VEHICLES");
+  //console.log("FETCH VEHICLES");
   const request = axios({
     method: 'get',
     url: "https://api.credr.com/v1/product/search/?q=eyJwYWdlIjoxLCJjdXJyZW50X2NpdHlfaWQiOjJ9",
@@ -22,7 +22,7 @@ export function fetchVehicles() {
       'Content-Type': 'application/x-www-form-urlencoded'
     }
   });
-  console.log(request);
+  //console.log(request);
   
   return {
     type: FETCH_VEHICLES,
